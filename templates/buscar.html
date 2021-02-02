@@ -1,0 +1,40 @@
+{% extends "inicio.html" %}
+{% block body %}
+
+    <form action="" method="POST" id="form">  <!--novalidate-->
+      <div class="form"></div>
+      <h1>Buscador de imágenes</h1>
+      <img src="{{ url_for('static', filename='images/menu3.jpg') }}" alt="login" style="vertical-align:middle;margin:0px 100px">
+	  
+	  
+        {{ form.hidden_tag() }}
+        
+        <p>
+            {{ form.nombre.label }}
+            {{ form.nombre(size=30) }}
+        </p>
+    
+        <p>
+            {{ form.enviar() }}
+        </p>
+
+
+      </div>  
+	</form>
+	
+	<nav>
+        <h1>Menu</h1>
+        <ul>
+          {% if g.user %}
+            <li><a class="action" href="{{ url_for('upload_file') }}">Subir imágenes</a>
+            <li><a class="action" href="{{ url_for('descargar') }}">Descargar imagenes</a>
+            <li><a class="action" href="{{ url_for('eliminar') }}">Eliminar imagenes</a>
+            <li><a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+          {% else %}
+            <li><a href="{{ url_for('registro') }}">Registrarse</a>
+            <li><a href="{{ url_for('login') }}">Iniciar Sesión</a>
+          {% endif %}
+          
+        </ul>
+	  </nav>
+{% endblock %}

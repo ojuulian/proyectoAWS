@@ -1,0 +1,35 @@
+{% extends "inicio.html" %}
+{% block title %}login{% endblock %}
+
+{% block body %}
+
+<form action="" method= "POST" id="form">  <!--novalidate-->
+    <div class="form"></div>
+    <h1>Iniciar sesion</h1>   
+    <img src="{{ url_for('static', filename='images/Vector_Persona.JPG') }}" alt="login" style="vertical-align:middle;margin:0px 100px">
+    
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.usuario.label }}
+            {{ form.usuario(size=30) }}
+        </p>
+        <p>
+            {{ form.password.label }}
+            {{ form.password(size=30) }}
+        </p>
+        <p>
+            {{ form.enviar() }}
+        </p>
+
+    <div>
+      <a href="/recuperacion" style="text-align: center; display: inline-block; width: 100%; "> ¿Olvidaste tu contraseña? </a>
+    </div>
+        <a href="/registro" style="text-align: center; display: inline-block; width: 100%; "> ¿No tienes Cuenta? Registrate! </a>
+        <p class="warnings" id="warnings" ></p>
+    </div>  
+
+</form>
+    
+{% endblock %}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Perfil Usuario</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
+	</head>
+	<body>
+		<header>
+			<img class= "img" src="{{ url_for('static', filename='images/menu.jpg') }}" alt="opciones" >
+			<h2> PIXELINU </h2>
+			<img  class= "img2" src="{{ url_for('static', filename='images/menu1.jpg') }}" alt="busqueda" aling = right>
+			
+			<nav>
+				<a href="#">PERSONAL</a>
+				<a href="#">PERFIL PUBLICO</a>
+				<a href="#">NAVEGABILIDAD</a>
+
+			</nav>
+					
+		</header>
+		
+		<img class= "foto1" src="{{ url_for('static', filename='images/pic.jpg') }}" alt="principal" >
+		
+		<div class ="wrapper">
+			<section>
+				<h2>GALERIAS</h2>
+			</section>
+
+		</div>
+		<img class= "foto2" src="{{ url_for('static', filename='images/folder.jpg') }}" alt="principal" >
+		<a href="/login" target="_blank" style="text-align: center; display: inline-block; width: 100%; "> Ingresa o accede aquí! </a>
+		<a href="/registro" style="text-align: center; display: inline-block; width: 100%; "> Registrate! </a>
+		
+      
+	</body>
+</html>

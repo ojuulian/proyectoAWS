@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Crear Actualizar</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/descargarestilos.css') }}" >
+	</head>
+	<body>
+		<header>
+			<h2> PIXELUNI </h2>
+		</header>
+		<p>
+        <img class= "foto2" src="{{ url_for('static', filename='images/pic.jpg') }}" alt="principal" >
+		</p>
+        <button class="boton_actualizar">CREAR</button>
+        <img class= "foto1" src="{{ url_for('static', filename='images/fondonegro.jpg') }}" alt="fondo" >
+		<p>
+			<a href="/personal">
+				 <button> VOLVER</button>
+			</a>
+			<a href="/">
+				<button> SALIR</button>
+			</a>
+		</p>		
+
+	</body>
+</html>

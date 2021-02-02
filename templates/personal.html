@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Descarga de imagenes</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/descargarestilos.css') }}" >
+	</head>
+	<body>
+		<header>
+			<h2> PIXELUNI </h2>
+							
+		</header>
+        <p>
+        <img class= "foto2" src="{{ url_for('static', filename='images/principal2.jpg') }}" alt="principal" >
+        <img class= "foto1" src="{{ url_for('static', filename='images/fondonegro.jpg') }}" alt="fondo" >
+		</p>
+		<p>
+    	<a href="/eliminar">
+			 <button> ELIMINAR</button>
+		</a>
+		<a href="/actualizar">
+			<button> ACTUALIZAR</button>
+	    </a>
+		<a href="/descargar">
+			<button> DESCARGAR</button>
+	    </a>
+		<a href="/crear">
+			<button> CREAR</button>
+		</a>
+		<a href="/buscar">
+			<button> BUSCAR</button>
+		</a>
+		<a href="/">
+			<button> SALIR</button>
+	    </a>
+		</p>
+	</body>
+</html>

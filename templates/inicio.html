@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}" />
+    <!-- <script src="loginapp.js"></script> -->
+    <header>
+      {% for message in get_flashed_messages() %}
+          <div class="flash">{{ message }}</div>
+      {% endfor %}
+    </header>
+</head>
+<body >
+    
+    <section class="content">
+        
+        
+    </section>
+
+    
+        {% block body %}
+        {% endblock %}
+
+
+        
+
+</body>
+</html>

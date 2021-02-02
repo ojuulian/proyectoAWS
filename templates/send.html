@@ -1,0 +1,18 @@
+{% extends "inicio.html" %}
+
+{% block title %}
+<h1>send</h1>
+{% endblock %}
+
+
+{% block body %}
+<form method="POST" action="{{url_for('send')}}">
+    <label for="para">Para</label>
+    <input name="para" id="para" required>
+    <label for="asunto">PAsunto</label>
+    <input name="asunto" id="asunto" required>
+    <label for="mensaje">Mensaje</label>
+    <input name="mensaje" id="mensaje" required></textarea>
+    <input type="submit" value="send">
+</form>
+{% endblock %}
